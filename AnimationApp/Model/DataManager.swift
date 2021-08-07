@@ -8,29 +8,20 @@
 import Spring
 
 class DataManager {
-    let pop = Animation(name: "pop",
-                        curve: "easeIn",
-                        duration: 2.5,
-                        force: 2.5)
     
-    let shake = Animation(name: "shake",
-                          curve: "spring",
-                          duration: 4.0,
-                          force: 1.7)
+    static let shared = DataManager()
     
-    let flash = Animation(name: "flash" ,
-                          curve: "easeInOut",
-                          duration: 3.0,
-                          force: 2.0)
+    let duration: [CGFloat] = [2.5, 4.0, 3.0, 3.5, 3.2]
+    let force: [CGFloat] = [2.7, 1.7, 2.0, 1.0, 1.8]
+    let name: [Spring.AnimationPreset] = [.pop,
+                                          .shake,
+                                          .flash,
+                                          .fall,
+                                          .fadeInDown ]
     
-    let fall = Animation(name: "fall",
-                         curve: "spring",
-                         duration: 3.0,
-                         force: 1.0)
-    
-    let fadeInDown = Animation(name: "fadeInDown",
-                               curve: "spring",
-                               duration: 3.0,
-                               force: 1.8)
-  
+    let curve: [Spring.AnimationCurve] = [.easeIn,
+                                          .spring,
+                                          .easeInOut,
+                                          .easeInExpo,
+                                          .easeInCirc]
 }
