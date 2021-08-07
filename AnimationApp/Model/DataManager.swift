@@ -24,4 +24,5 @@ class DataManager {
                                           .easeInOut,
                                           .easeInExpo,
                                           .easeInCirc]
+    private init() {}
 }
